@@ -15,8 +15,8 @@ public class Solution6 {
     // then copies the element of first array into second and second into first
 
     public static void main(String[] args) {
-       // common_end(new int[]{1, 2, 3}, new int[]{7, 3});
-       // common_end(new int[]{1, 2, 3}, new int[]{7, 3, 2});
+        common_end(new int[]{1, 2, 3}, new int[]{7, 3});
+        common_end(new int[]{1, 2, 3}, new int[]{7, 3, 2});
         common_end(new int[]{1, 2, 3}, new int[]{1,3});
     }
 
