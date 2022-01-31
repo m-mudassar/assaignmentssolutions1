@@ -1,5 +1,3 @@
-package softwarehouse.vu;
-
 public class Solution5 {
     // Given an array of ints,
     // return true if 1, 2, 3 all appears in the array somewhere.
@@ -15,10 +13,13 @@ public class Solution5 {
     }
 
     public static void array123(int[] arr){
+        // making all three numbers to bool and set them to false
         boolean num1 = false;
         boolean num2 = false;
         boolean num3 = false;
 
+        // looping through the array
+        // if the number found we set the bool to true
         for (int i = 0; i<arr.length; i++){
             if (arr[i] == 1){
                 num1 = true;
@@ -33,6 +34,8 @@ public class Solution5 {
 
         }
 
+        // if all three numbers are found(set to true)
+        // we print true
         if (num1 && num2 && num3){
             System.out.println("True");
         } else {

@@ -1,5 +1,3 @@
-package softwarehouse.vu;
-
 import java.util.Arrays;
 
 public class Solution6 {
@@ -15,16 +13,24 @@ public class Solution6 {
     // then copies the element of first array into second and second into first
 
     public static void main(String[] args) {
-        common_end(new int[]{1, 2, 3}, new int[]{7, 3});
-        common_end(new int[]{1, 2, 3}, new int[]{7, 3, 2});
-        common_end(new int[]{1, 2, 3}, new int[]{1,3});
+        System.out.println(common_end(new int[]{1, 2, 3}, new int[]{7, 3}));
+        System.out.println(common_end(new int[]{1, 2, 3}, new int[]{7, 3, 2}));
+        System.out.println(common_end(new int[]{1, 2, 3}, new int[]{1,3}));
     }
 
-    public static void common_end(int[] arr1, int[] arr2){
+    // returns true if the first OR last elements are same
+    public static boolean common_end(int[] arr1, int[] arr2){
+
+        // check if the first elements are same
         if (arr1[0] == arr2[0]){
-            System.out.println("First elements are the same of " + Arrays.toString(arr1) + Arrays.toString(arr2));
-        } else if (arr1[arr1.length-1] == arr2[arr2.length-1]){
-            System.out.println("Last elements are the same of " + Arrays.toString(arr1) + Arrays.toString(arr2));
+            return true;
+
+        } 
+        // check if the last elements are same
+        else if (arr1[arr1.length-1] == arr2[arr2.length-1]){
+            return true;
         }
+
+        return false;
     }
 }

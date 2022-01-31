@@ -1,5 +1,3 @@
-package softwarehouse.vu;
-
 import java.util.Arrays;
 
 public class Solution9 {
@@ -14,9 +12,12 @@ public class Solution9 {
     }
 
     public static String alphabet(String str){
+        // converting the string to character array
         char[] arr = str.toCharArray();
-        String reversedString;
+        String stringInAlphabeticalOrder;
         char temp;
+
+        // sorting in alphabetical order
         for (int i=0; i<arr.length; i++){
             for(int j=i+1; j<arr.length; j++){
                 if (arr[j] < arr[i]){
@@ -27,8 +28,8 @@ public class Solution9 {
             }
         }
 
-       // System.out.println(arr);
-        reversedString = new String(arr);
-        return reversedString;
+       // converting character array back to string
+        stringInAlphabeticalOrder = new String(arr);
+        return stringInAlphabeticalOrder;
     }
 }

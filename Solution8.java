@@ -1,5 +1,3 @@
-package softwarehouse.vu;
-
 public class Solution8 {
     // Write a function Word(sen),
     // take the sen parameter being passed
@@ -12,9 +10,11 @@ public class Solution8 {
     }
 
     public static String word(String sen){
+        // splitting the string into words
         String[] words = sen.split(" ");
         String maxLengthWord = "";
 
+        // finding the word with the max length
         for(int i = 0; i < words.length; i++){
             if(words[i].length() > maxLengthWord.length()){
                 maxLengthWord = words[i];

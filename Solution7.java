@@ -1,5 +1,3 @@
-package softwarehouse.vu;
-
 public class Solution7 {
     // Given 3 int values, a b c,
     // return their sum.
@@ -19,13 +17,15 @@ public class Solution7 {
 
     public static int lone_sum(int a, int b, int c){
         int sum = 0;
-
+        // if a is not equal to b and c
         if (a!=b && a!=c){
             sum += a;
         }
+        // if b is not equal to a and c
         if (b!=a && b!=c){
             sum+=b;
         }
+        // if c is not equal to a and b
         if (c!=a && c!=b){
             sum+=c;
         }

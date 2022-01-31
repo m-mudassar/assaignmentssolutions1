@@ -1,5 +1,3 @@
-package softwarehouse.vu;
-
 public class Solution1 {
     // Write a program which should count vowels in the string
     // and return vowels in reverse order if vowels are more than three
@@ -9,6 +7,7 @@ public class Solution1 {
         StringBuilder vowels = new StringBuilder();
 
         for (int i = 0; i<s.length(); i++){
+            // getting a char from string
             char ch = s.charAt(i);
             if (ch == 'a'|| ch == 'A'
                     || ch == 'e'
@@ -19,11 +18,12 @@ public class Solution1 {
                     || ch == 'O'
                     || ch == 'u'
                     || ch == 'U'){
+            // if vowels found, increment count
                 count++;
                 vowels.append(ch);
             }
         }
-
+        // if vowels are more than 3, reverse the vowels
         if (count > 3){
             StringBuilder reversedString = new StringBuilder(vowels.toString());
             reversedString.reverse();

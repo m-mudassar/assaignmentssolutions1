@@ -1,5 +1,3 @@
-package softwarehouse.vu;
-
 import java.io.File;
 import java.io.FileReader;
 import java.util.LinkedList;
@@ -17,9 +15,13 @@ public class Solution10 {
         try {
             FileReader fr = new FileReader(file);
             int content;
+
+            // reading the data from file
             while ((content = fr.read()) != -1) {
                 char ch =(char) content;
+                // checking if the data is perfectly numeric
                 if (ch >= '0' && ch <= '9') {
+                    // storing the data in the binary tree
                     tree.insert(Integer.parseInt(String.valueOf(ch)));
                 }
             }
@@ -30,6 +32,7 @@ public class Solution10 {
         tree.inOrder(tree.root);
     }
 
+    // code for binary tree
     protected static class BinaryTree {
         public BinaryNode root;
         public BinaryTree(){
@@ -71,7 +74,7 @@ public class Solution10 {
         }
 
     }
-
+    // code for binary node
     protected static class BinaryNode {
         private int value;
         private BinaryNode left;

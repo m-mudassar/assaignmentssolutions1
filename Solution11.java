@@ -1,5 +1,3 @@
-package softwarehouse.vu;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -22,23 +20,29 @@ public class Solution11 {
             boolean isConsecutive = false;
             FileWriter fileWriter = new FileWriter(nonConsecutives);
 
+            // reading data from file
             while (line != null) {
                 sentences = line.split("\\.");
+                // looping through all sentences
                 for (String sentence : sentences) {
+                    // looping through one sentence
                     for (int i = 0; i + 1<sentence.length(); i++){
+                        // checking if the sentence have consecutive characters
                             char ch = sentence.charAt(i);
                             char ch2 = sentence.charAt(i+1);
                             if (ch == ch2){
                                 isConsecutive = true;
-                            } else {
-
                             }
                     }
 
+                    // printing the sentence
+                    // if it has consecutive characters
                     if (isConsecutive == true){
                         System.out.println(sentence);
                         isConsecutive = false;
                     } else {
+                        // otherwise write the sentence
+                        // in another file
                         fileWriter.write(sentence + ".");
                     }
                 }
